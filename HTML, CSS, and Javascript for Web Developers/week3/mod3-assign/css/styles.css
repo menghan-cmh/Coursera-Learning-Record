@@ -43,6 +43,8 @@ body {
 }
 
 #nav-list a {
+    border: 1px solid black;
+    margin-top: -1px;
     color: black;
     text-align: center;
 }
