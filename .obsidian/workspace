@@ -4,7 +4,7 @@
     "type": "split",
     "children": [
       {
-        "id": "ab4eb62001887f7c",
+        "id": "dee50d71f83e515f",
         "type": "split",
         "children": [
           {
@@ -13,18 +13,18 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "HTML, CSS, and Javascript for Web Developers/week2/Note.md",
+                "file": "HTML, CSS, and Javascript for Web Developers/week3/Note.md",
                 "mode": "source"
               }
             }
           },
           {
-            "id": "4c342c0c5134134e",
+            "id": "679650e0b0786622",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "HTML, CSS, and Javascript for Web Developers/week2/Note.md",
+                "file": "HTML, CSS, and Javascript for Web Developers/week3/Note.md",
                 "mode": "preview"
               }
             }
@@ -70,8 +70,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 141,
-    "collapsed": true
+    "width": 141
   },
   "right": {
     "id": "5244ac4de5661a27",
@@ -87,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "HTML, CSS, and Javascript for Web Developers/week2/Note.md",
+                "file": "HTML, CSS, and Javascript for Web Developers/week3/Note.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -107,12 +106,13 @@
   },
   "active": "d440ebf8931b89f1",
   "lastOpenFiles": [
-    "HTML, CSS, and Javascript for Web Developers/week2/Note.md",
-    "Pasted image 20220712140314.png",
+    "HTML, CSS, and Javascript for Web Developers/week3/Note.md",
     "HTML, CSS, and Javascript for Web Developers/week1/Note.md",
-    "Pasted image 20220703165049.png",
+    "HTML, CSS, and Javascript for Web Developers/week2/Note.md",
+    "README.md",
     "Untitled.md",
-    "HTML, CSS, and Javascript for Web Developers/Untitled.md",
-    "README.md"
+    "Pasted image 20220712140314.png",
+    "Pasted image 20220703165049.png",
+    "HTML, CSS, and Javascript for Web Developers/Untitled.md"
   ]
 }

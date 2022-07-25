@@ -1,0 +1,88 @@
+body {
+    font-family: 'Raleway', sans-serif;
+    background-color: lightblue;
+    color: black;
+}
+
+/** HEADER **/
+#header-nav {
+    background-color: grey;
+    border-radius: 0;
+    border: 0;
+    height: fit-content;
+}
+
+.navbar-brand {
+    padding-top: 20px;
+    margin-bottom: 10px;
+}
+
+.navbar-brand h1 { /* Restaurant name */
+    font-weight: bold;
+    font-size: 2em;
+    color: black;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px lightyellow;
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: .75;
+}
+
+.navbar-brand a:hover, .navbar-brand a:focus {
+    text-decoration: none;
+}
+
+.navbar-brand p span {
+    vertical-align: middle;
+}
+
+#nav-list {
+    margin-top: 0;
+    margin-bottom: 0;
+    background-color: lightgray;
+}
+
+#nav-list a {
+    color: black;
+    text-align: center;
+}
+#nav-list a:hover {
+    background: white;
+}
+#nav-list a span {
+    font-size: 1.8em;
+}
+.navbar-header button.navbar-toggle, .navbar-header .icon-bar {
+    border: 1px solid black;
+}
+.navbar-header button.navbar-toggle {
+    clear: both;
+    margin-top: -40px;
+}
+
+.dish {
+    border: 1px solid black;
+    background-color: lightpink;
+    margin-bottom: 15px;
+}
+.section-title {
+    text-align: center;
+    font-weight: bold;
+}
+
+
+/********** Medium devices only **********/
+@media (min-width: 992px) {
+
+}
+  
+/********** Small devices only **********/
+@media (min-width: 768px) and (max-width: 991px) {
+    
+}
+  
+/********** Extra small devices only **********/
+@media (max-width: 767px) {
+    
+}
+  
