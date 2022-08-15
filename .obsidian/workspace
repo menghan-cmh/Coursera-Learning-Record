@@ -4,7 +4,7 @@
     "type": "split",
     "children": [
       {
-        "id": "5a7d9c892b9e3033",
+        "id": "0b88f31ec56fdcf0",
         "type": "split",
         "children": [
           {
@@ -13,18 +13,18 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "HTML, CSS, and Javascript for Web Developers/week4/Note.md",
+                "file": "HTML, CSS, and Javascript for Web Developers/week5/note.md",
                 "mode": "source"
               }
             }
           },
           {
-            "id": "eba89105561420c2",
+            "id": "90ffb4d153aaad94",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "HTML, CSS, and Javascript for Web Developers/week4/Note.md",
+                "file": "HTML, CSS, and Javascript for Web Developers/week5/note.md",
                 "mode": "preview"
               }
             }
@@ -87,7 +87,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "HTML, CSS, and Javascript for Web Developers/week4/Note.md",
+                "file": "HTML, CSS, and Javascript for Web Developers/week5/note.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -107,10 +107,11 @@
   },
   "active": "d440ebf8931b89f1",
   "lastOpenFiles": [
+    "HTML, CSS, and Javascript for Web Developers/week5/note.md",
     "HTML, CSS, and Javascript for Web Developers/week4/Note.md",
+    "Untitled.md",
     "HTML, CSS, and Javascript for Web Developers/week2/Note.md",
     "HTML, CSS, and Javascript for Web Developers/week3/Note.md",
-    "Untitled.md",
     "HTML, CSS, and Javascript for Web Developers/week1/Note.md",
     "README.md",
     "Pasted image 20220712140314.png",
