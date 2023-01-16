@@ -348,3 +348,14 @@ const [first, second, third, ...secondVisit] = top7;
 ```
 
 ### JavaScript DOM manipulation
+- DOM gives developers power in how they can manipulate and update webpages
+- DOM tree structure: DOM is in the form of a JavaScript object with nested objects for different parts of the page.
+- to interact with DOM
+    - the Elements tab in the browser's DevTOols
+    - the Console panel
+```
+const h2 = document.createElement('h2')
+h2.innerText = "h2 heading"
+h2.setAttribute('id', 'sub-heading') // attribute name, attribute value
+```
+-  The DOM is an in-memory representation of the active HTML document. Any changes made are local and do not affect the document stored on the webserver.
