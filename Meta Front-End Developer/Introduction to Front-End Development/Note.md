@@ -773,19 +773,104 @@ selector {
 - Bootstrap
     - a collection of pre-written code chunks in CSS and JavaScript that allows you to create websites more quickly than if you had to create every bit of code from scratch
     -  The first element I add when setting up a Bootstrap website is a **container**, as it is required to be able to use the Bootstrap Grid System.
-```
-<div class="container">
-    <div class="row>
-        <div class="col">
-            <h1>Our Menu</h1>
 
+
+#### Using Bootstrap styles
+- infixes and modifier
+    - extra small is the default breakpoint in Bootstrap CSS rules (mobile first)
+    - use an infix to indicate the breakpoint in Bootstrap CSS rules.  
+
+| break point | class infix | dimension |
+|-|-|-|
+| Extra samll | | < 576px |
+| Small |sm |≥ 576px|
+| Medium | md | ≥ 768px |
+| Large | lg| ≥ 992px |
+| Extra large |xl| ≥ 1200px|
+| Extra extra large | xxl| ≥ 1400px|
+
+- Bootstrap components provide a pre-built set of reusable UI styles and elements for web applications
+- modifier
+    - Bootstrap modifiers add a CSS class to change the visual style of components
+    - `<div class="alert alert-primary" role="alert">a primary alert</div>`
+        - the `-primary` part of the class is the modifier, to show in blue
+        - use `-danger` modifier, then shows in red
+        - eg. `-secondary`, `-success`, `-info`, `warning`, `danger`, `light`, `dark` etc.
+        - identify the function of the alert by `role="alert"`
+        - Alerts are useful for displaying information, warnings or error messages to users
+
+#### Bootstrap grid
+- The bootstrap grid system can create web page layouts through a series of rows and columns that house the content
+    - a 12 column grid system that can be fluid or fixed The bootstrap grid system always has a container, rows and columns. The container is the root element of grids.
+    - If I want to control how many spaces a column uses, I can suffix a number
+    - configure content to use different layouts based on the device using the breakpoint specific CSS rules
+
+#### Bootstrap components
+- Bootstrap components
+    - pre-made set of UI elements and styles
+- Bootstrap comes with a badge component that I can use to highlight
+    - `<span class="badge bg-primary">New</span>`
+- card component
+    - With card elements I can style and accommodate different types of contents like title's subtitle body copy and images for the cards
+    - `class="card"`, `class="card-img-top"`, `class="card-title"`, `class="card-body"`
+
+#### Using Bootstrap documentation
+- detailed documentation on setting up and using the features available in its library
+    - [document](https://getbootstrap.com/docs)
+- Navigating the documentation
+    - Layout: grid
+    - Content: default text styling and how to use responsive images and tables
+    - Forms: build forms using Bootstrap's styles
+        - form styling
+
+        |Form Element |CSS class|
+        |-|-|
+        |input|form-control|
+        |input type="checkbox"|form-check-input|
+        |input type="radio"|form-check-input|
+        |input type="range"|form-range|
+        |select|form-select|
+        - switches
+        ```
+        <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox">
         </div>
-        <div class="col">
-            <h2>Prices</h2>
+        ```
+        - input-group
+        ```
+        <div class="input-group">
+            <span class="input-group-text">$</span>
+            <input type="text" class="form-control">
+            <span class="input-group-text">.00</span>
         </div>
-    </div>
-</div>
-```
+        ```
+        - floating labels
+        ```
+        <div class="form-floating">
+            <input type="email" class="form-control" id="addressInput" placeholder="Address">
+            <label for="addressInput">Address</label>
+        </div>
+        ```
+    - Components
+
+#### Other CSS frameworks and libraries
+- Foundation
+    - framework for building user interfaces similar to Bootstrap
+    - it can be used to style content for sending via email.
+- Pure.css
+    - library for building user interfaces
+    - designed to be minimal in file size
+- Tailwind CSS
+    -  CSS framework that uses a utility-based approach for its CSS rules
+    - provides many CSS classes with a single purpose
+    - advantage: more flexible for customizing your webpage's design using the framework
+    - disad However, the disadvantage is that if multiple developers are working on a project, it could lead to inconsistent design if the team is not strict on its design rules.
+- UIKit
+    - lightweight CSS framework featuring a small set of responsive components
+    - Its simple design allows developers to easily customize the style rules and visuals.
+- MVP.css (Minimal Viable Product)
+    - a small CSS library that automatically styles HTML elements without needing to apply CSS classes to them
+    - aims to allow a developer to quickly prototype a user interface without worrying about the final design, while still being visually appealing
 
 
 
@@ -796,6 +881,130 @@ selector {
 <p id="week3_2"></p>
 
 ### Introduction to React
+
+#### Static and dynamic content
+- static content
+    - files(videos, images etc.) the server transered as they are stored in the web server
+    - send request to web server, web server respond by sendin gthe file to browser
+- dynamic content
+    - generated when the HTTP request is made
+        - based on input from a user
+        - based on the current date
+    - send request to webserver, web server communicates with the application server to check, application server confirms and specifies the content should show based on the profile
+- web server
+- application server (back-end)
+    - generates the dynamic content that the web server sends back to the user's browser.
+    - more complex processing than web servers
+        - run application logic
+        - communicate with the database
+        - check permissions
+- There are application servers for every type of content out there, from music streaming to creating your own blog. You can even create your own application servers, such as building a back-end for a web application.
+- Application servers typically have a limited capacity on how many requests they can process per second.
+- Web servers use a process called caching instead of generating content dynamically for every request.
+    - caching, a saved copy of dynamic content readily available upon request
+    - web server check the cache first, if not in cache, go to application server and stored in the cache, then send the dynamic content back to the browser
+
+
+#### Single page applications
+- traditional website
+    - before the advent of modern JavaScript frameworks, most are multi-page applications
+- SPA
+    - user-friendly, mobile-friendly experience
+    - only one HTML page that gets sent from the server to the browser
+    - the page will update its content as users interact with website
+    - allows user to interact with thw website without needing to download entire new web pages, instead, rewrite the current web page 
+    - browsing experience faster and more responsive to user input
+- two approaches to serving code and resources
+    - bundling
+        - when the browser requests the application, the server returns and loads all necessary HTML, CSS and JavaScript immediately.
+        - if your application is complex and has a lot of resources, your bundles will grow quite large and take a long time to download
+    - lazy loading
+        - the browser requests the application and the server returns only the minimum HTML, CSS and JavaScript needed to load the application, additional resources are downloaded as required.
+
+ #### What is React
+ - React
+    - focused on working with components which makes it simple to build functional user interfaces on web and mobile
+    - most common Javascript library
+    - single page applications and also develop mobile applications with React native
+- building an app
+    - consider the navigation
+    - how the app will request data from a web server
+- React is used in conjunction with other JavaScript libraries during development
+- React is useful since it allows developers to write less code to create functionality -> easier to maintain code in the long term and simplifies testing
+- React components: a small piece of a user interface 
+    - allows developing, isolated testing and reuse
+- a lot of open source libraries provide premade components for React projects
+
+
+#### Case Study: Why did Facebook engineers create React?
+- React isn’t an MVC(Model-View-Controller) framework.
+    - React is a library for building composable user interfaces. It encourages the creation of reusable UI components which present data that changes over time.
+- React doesn’t use templates.
+    - Traditionally, web application UIs are built using templates or HTML directives. These templates dictate the full set of abstractions that you are allowed to use to build your UI.
+    - React approaches building user interfaces differently by breaking them into components. This means React uses a real, full-featured programming language to render views, which we see as an advantage over templates for a few reasons:
+        - JavaScript is a flexible, powerful programming language with the ability to build abstractions. This is incredibly important in large applications.
+        - By unifying your markup with its corresponding view logic, React can actually make views easier to extend and maintain.
+        - By baking an understanding of markup and content into JavaScript, there’s no manual string concatenation and therefore less surface area for XSS vulnerabilities.
+- React updates are dead simple.
+    - React really shines when your data changes over time.
+    - In a traditional JavaScript application, you need to look at what data changed and imperatively make changes to the DOM to keep it up-to-date. Even AngularJS, which provides a declarative interface via directives and data binding requires a linking function to manually update DOM nodes.
+    - React takes a different approach.
+    - When your component is first initialized, the render method is called, generating a lightweight representation of your view. From that representation, a string of markup is produced and injected into the document. When your data changes, the render method is called again. In order to perform updates as efficiently as possible, we diff the return value from the previous call to render with the new one and generate a minimal set of changes to be applied to the DOM.
+    - The data returned from render is neither a string nor a DOM node — it’s a lightweight description of what the DOM should look like.
+    - We call this process reconciliation. Check out this jsFiddle to see an example of reconciliation in action.
+    - Because this re-render is so fast (around 1ms for TodoMVC), the developer doesn’t need to explicitly specify data bindings. We’ve found this approach makes it easier to build apps.
+- HTML is just the beginning.
+    - Because React has its own lightweight representation of the document, we can do some pretty cool things with it:
+        - Facebook has dynamic charts that render to <canvas> instead of HTML.
+        - Instagram is a “single page” web app built entirely with React and Backbone.Router. Designers regularly contribute React code with JSX.
+        - We’ve built internal prototypes that run React apps in a web worker and use React to drive native iOS views via an Objective-C bridge.
+        - You can run React on the server for SEO, performance, code sharing and overall flexibility.
+        - Events behave in a consistent, standards-compliant way in all browsers (including IE8) and automatically use event delegation.
+
+#### How React works
+- React - computing the virtual DOM
+    - A reality component has a one to one relationship to an HTML element that is displayed on the webpage
+    - When React builds out its DOM tree of components, it builds out its own DOM in memory called virtual DOM
+    - The virtual DOMis a representation of the browser DOM that is kept in memory. React uses this virtual DOM to update the browser DOM only when it needs to.
+    - React checks to see if the HTML components in the virtual DOM match the browser DOM. if doesn't match, change is required, if nothing change, no update performed. This process called **reconciliation**.
+
+#### The Virtual DOM
+- reconciliation process
+    - Step 1: The virtual DOM is updated.
+    - Step 2: The virtual DOM is compared to the previous version of the virtual DOM and checks which elements have changed.
+    - Step 3: The changed elements are updated in the browser DOM.
+    - Step 4: The displayed webpage updates to match the browser DOM.
+- As updating the browser DOM can be a slow operation, this process helps to reduce the number of updates to the browser DOM by only updating when it is necessary.
+- But even with this process, if a lot of elements are updated by an event, pushing the update to the browser DOM can still be expensive and cause slow performance in the web application.
+- The React team invested many years of research into solving this problem. The outcome of that research is what’s known as the React Fiber Architecture.
+- The Fiber Architecture allows React to incrementally render the web page. What this means is that instead of immediately updating the browser DOM with all virtual DOM changes, React can spread the update over time. But what does "over time" mean?
+- Imagine a really long web page in the web browser. If the user scrolls to the bottom, the top of the web page is no longer visible. The user then clicks a button on the bottom of the web page that updates some text on the top of the web page.
+- But the top of the page isn’t visible. Therefore, why update it immediately?
+- Perhaps there is text currently displayed on the bottom of the page that also updates when the button is clicked. Wouldn’t that be a higher priority to update than the non-visible text?
+- This is the principle of the React Fiber Architecture. React can optimize when and where updates occur to the browser DOM to significantly improve application performance and responsiveness to user input. Think of it as a priority system. The highest priority changes, the elements visible to the user, are updated first. While lower priority changes, the elements not currently displayed, are updated later.
+- While you’re unlikely to interact with the virtual DOM and Fiber Architecture yourself, it’s good to know what’s going on if issues occur during the development of your web application.
+- There are many tools available to help you investigate how React is processing your webpage. The official React Developer Tools web browser plugin developed by Meta will be one of the key tools in your developer toolbox. So, if you do have to look deeper into the code, you’ll have the right toolbox available to help you. These tools will be explored later on. 
+
+#### Component hierarchy
+- Every React application contains at least one component, the root component or app component
+- Components are added to the app component to build out a tree structure of components that make up the application
+
+#### Alternatives to React
+- Other JavaScript libraries
+    - Lodash
+        - Lodash provides common logic such as sort list or round 3.14 to 3 as a utility library to save you time as a developer.
+    - Luxon
+        - Luxon helps you work with dates and times by providing functions to manipulate and display them. 
+        - For example, think of how dates are formatted in different countries. In the United States the format is Month Day Year but in Europe it is Day Month Year. This is one area where Luxon can help you display the date in the user's local format.
+    - Redux
+        - It helps you manage your application state and even has advanced features such as undo and redo.
+    - Axios
+        - helps to simplify sending HTTP requests and processing the response. communicating with APIs over HTTP frequently
+        - It also provides advanced features allowing you to cancel requests and to change data received from the web server before your application uses the data.
+    - Jest
+        - helps you to write automated tests for code and works with many libraries and frameworks
+        - It also provides reporting utilities such as providing information on how much of your code is tested by your automated tests.
+
 
 
 [Back to Top↑](#top)
