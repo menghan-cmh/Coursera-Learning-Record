@@ -327,3 +327,24 @@ const [first, second, third, ...secondVisit] = top7;
 
 
 ## JavaScript in the Browser
+### JavaScript modules
+- complex programs can be useful for multiple applications, they can be saved ans used elesewhere as modules in this video
+- JavaScript modules are standalone units of code that you can reuse again and again
+    - add
+    - remove
+    - replace
+- Server JS -> Common JS
+    - to sprcify how modules should work outside of the browser environment
+    - mostly used on server side JavaScript namely node.js
+- To use an ES6 module in a browser, the script's type attribute must be set to “module”.  
+```
+<script type="text/javascript"> // default is "type/javascript" as well
+</script>
+<script type="modules">
+    import {func }from './file.js';
+    func();
+</script>
+<>
+```
+
+### JavaScript DOM manipulation
