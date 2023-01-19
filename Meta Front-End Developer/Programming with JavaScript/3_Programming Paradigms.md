@@ -359,3 +359,127 @@ h2.innerText = "h2 heading"
 h2.setAttribute('id', 'sub-heading') // attribute name, attribute value
 ```
 -  The DOM is an in-memory representation of the active HTML document. Any changes made are local and do not affect the document stored on the webserver.
+
+### JavaScript interactivity
+- JavaScript's initial purpose was to provide interactivity in the browser
+    - Get their geolocation,
+    - Interact with maps,
+    - Play games in the browser, 
+    - Handle all kinds of user-triggered events, regardless of the device,
+    - Verify form input before sending it to the backend of a webapp,
+    - and more!
+
+### JavaScript selectors
+- JavaScript selectors work with the document object which you can access by typing the keyword `document`
+- locating specific elements inside the document object
+    - query selector method: 
+        - `document.querySelector('p');`
+        - `document.querySelectorAll('p');`
+    - get element by ID:
+        - `getElementById('');`
+    - get element by class name:
+        - `getElementByClassName('');`
+
+### Event Handling
+- User-triggered events: use JS code to listen for these event
+    - `<button> </button>`
+```
+const target = document.querySelector('body');
+function handleClick() {
+    console.log('clicked the body');
+}
+target.addEventListener('click', handleClick)
+```
+or
+```
+<h1 onclick="handleClick2()">heading</h1>
+function handleClick2() {
+    console.log('clicked the heading');
+}
+```
+
+### Web page content update
+- a simple example that demonstrates how to manipulate information displayed based on user input.
+- capture input: `prompt()`
+```
+let answer = prompt('What is your name?');
+if (typeof(answer) === 'string') {
+    var h1 = document.createElement('h1')
+    h1.innerText = answer;
+    document.body.innerText = '';
+    document.body.appendChild(h1);
+}
+```
+- to be more efficient in a more complex way
+    - dynamically adding the input element, and you're setting its HTML type attribute to text.
+```
+var h1 = document.createElement('h1')
+h1.innerText = "Type into the input to make this text change"
+
+var input = document.createElement('input')
+input.setAttribute('type', 'text')
+
+document.body.innerText = '';
+document.body.appendChild(h1);
+document.body.appendChild(input);
+```
+- set up an event listener. The event you're listening for is the change event. In this case, the change event will fire after you've typed into the input and pressed the ENTER key.
+```
+var h1 = document.createElement('h1')
+h1.innerText = "Type into the input to make this text change"
+
+var input = document.createElement('input')
+input.setAttribute('type', 'text')
+
+document.body.innerText = '';
+document.body.appendChild(h1);
+document.body.appendChild(input);
+
+input.addEventListener('change', function() {
+    h1.innerText = input.value
+})
+```
+
+### Moving data around on the web
+- JSON, which is JavaScript Object Notation.
+- Before JSON, the most common data interchange file format was XML
+- Thus, the two major reasons for the JSON format becoming the dominant data interchange format that it is today is two-fold:
+    - First, it's very lightweight, with syntax very similar to "a stringified JavaScript object". You'll learn more about the specifics of this later.
+    - Second, it's easier to handle in JavaScript code, since, JSON, after all, is just JavaScript.
+- Besides being a data interchange format, JSON is also a file format. It's not uncommon to access some third-party data from a third-party website into our own code in the form of a `json` file.
+```
+const currencyInfo = {
+    [
+        USD: {
+            // ...
+        },
+        GBP: {
+            // ...
+        },
+        EUR: {
+            // ...
+        }
+    ]
+}
+```
+- JSON is properly-formatted string. (key-value pair)
+    - primitive values: strings, numbers, bolleans, null
+    - complex values: objects and arrays (no functions!)
+    - Objects have double-quoted strings for all keys
+    - Properties are comma-delimited both in JSON objects and in JSON arrays, just like in regular JavaScript code
+    - String properties must be surrounded in double quotes. 
+    - Number properties are represented using the regular JavaScript number syntax
+    - Boolean properties are represented using the regular JavaScript boolean syntax: `true`, `false`
+    - Null as a property is the same as in regular JavaScript; it's just a `null`
+- JSON could be object and array
+
+### JavaScript Object Notation - JSON
+- conver JSON string to a JavaScript object
+    - `const aPlainObj = JSON.parse(jsonStr);`
+- convert object to JSON string
+    - `JSON.stringify(data)`
+- limitations
+    - plain JavaScript objects can hold functions, JSON strings cannot.
+    - valid JSON doesn't allow the use of JavaScript comments. 
+    - while stringfy a JavaScript object containing a method, that method will be excluded from the stringfy operation
+
